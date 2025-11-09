@@ -1,0 +1,6 @@
+global: {}
+route:
+  group_by: ['alertname']
+  receiver: 'null'
+receivers:
+  - name: 'null'

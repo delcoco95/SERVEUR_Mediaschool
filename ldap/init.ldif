@@ -1,0 +1,167 @@
+dn: ou=People,dc=mediaschool,dc=local
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=Groups,dc=mediaschool,dc=local
+objectClass: organizationalUnit
+ou: Groups
+
+dn: cn=Admins,ou=Groups,dc=mediaschool,dc=local
+objectClass: groupOfNames
+cn: Admins
+member: cn=admin,dc=mediaschool,dc=local
+
+dn: cn=Profs,ou=Groups,dc=mediaschool,dc=local
+objectClass: groupOfNames
+cn: Profs
+member: cn=admin,dc=mediaschool,dc=local
+
+dn: cn=SISR,ou=Groups,dc=mediaschool,dc=local
+objectClass: groupOfNames
+cn: SISR
+member: cn=admin,dc=mediaschool,dc=local
+
+dn: cn=SLAM,ou=Groups,dc=mediaschool,dc=local
+objectClass: groupOfNames
+cn: SLAM
+member: cn=admin,dc=mediaschool,dc=local
+dn: uid=sisr01,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: sisr01
+sn: sisr01
+uid: sisr01
+userPassword: eleve2025
+
+dn: uid=sisr02,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: sisr02
+sn: sisr02
+uid: sisr02
+userPassword: eleve2025
+
+dn: uid=sisr03,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: sisr03
+sn: sisr03
+uid: sisr03
+userPassword: eleve2025
+
+dn: uid=sisr04,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: sisr04
+sn: sisr04
+uid: sisr04
+userPassword: eleve2025
+
+dn: uid=sisr05,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: sisr05
+sn: sisr05
+uid: sisr05
+userPassword: eleve2025
+
+dn: uid=sisr06,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: sisr06
+sn: sisr06
+uid: sisr06
+userPassword: eleve2025
+
+dn: uid=sisr07,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: sisr07
+sn: sisr07
+uid: sisr07
+userPassword: eleve2025
+
+dn: uid=sisr08,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: sisr08
+sn: sisr08
+uid: sisr08
+userPassword: eleve2025
+
+dn: uid=sisr09,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: sisr09
+sn: sisr09
+uid: sisr09
+userPassword: eleve2025
+
+dn: uid=sisr10,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: sisr10
+sn: sisr10
+uid: sisr10
+userPassword: eleve2025
+
+dn: uid=slam01,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: slam01
+sn: slam01
+uid: slam01
+userPassword: eleve2025
+
+dn: uid=slam02,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: slam02
+sn: slam02
+uid: slam02
+userPassword: eleve2025
+
+dn: uid=slam03,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: slam03
+sn: slam03
+uid: slam03
+userPassword: eleve2025
+
+dn: uid=slam04,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: slam04
+sn: slam04
+uid: slam04
+userPassword: eleve2025
+
+dn: uid=slam05,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: slam05
+sn: slam05
+uid: slam05
+userPassword: eleve2025
+
+dn: uid=prof1,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: prof1
+sn: prof1
+uid: prof1
+userPassword: prof2025
+
+dn: uid=prof2,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: prof2
+sn: prof2
+uid: prof2
+userPassword: prof2025
+
+dn: uid=prof3,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: prof3
+sn: prof3
+uid: prof3
+userPassword: prof2025
+
+dn: uid=admin1,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: admin1
+sn: admin1
+uid: admin1
+userPassword: prof2025
+
+dn: uid=admin2,ou=People,dc=mediaschool,dc=local
+objectClass: inetOrgPerson
+cn: admin2
+sn: admin2
+uid: admin2
+userPassword: prof2025
+

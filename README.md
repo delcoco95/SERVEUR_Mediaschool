@@ -22,6 +22,10 @@ L’ensemble est conçu pour être pédagogique, collaboratif et reproductible s
 | Administration | Portainer |
 | Annuaire LDAP | OpenLDAP + phpLDAPadmin |
 | VPN sécurisé | WireGuard |
+| Port OpenLDAP | 389 (non chiffré) et 636 (connexion chiffré) |
+| Port Wireguard | 51820 |
+| Port phpLDAPadmin | 8080 -> dn phpldap.local |
+
 
 ## 3. Installation avec Vagrant
 Structure du projet :

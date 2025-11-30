@@ -1,0 +1,88 @@
+version: "3.9"
+
+services:
+  # Interface web WireGuard (wg-easy)
+  wg-easy:
+    image: weejewel/wg-easy
+    container_name: wg-easy
+    restart: unless-stopped
+
+    sysctls:
+      - net.ipv4.ip_forward=1
+      - net.ipv4.conf.all.src_valid_mark=1
+
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+
+    ports:
+      - "51821:51821/tcp"    # Interface web
+      - "51820:51820/udp"    # VPN WireGuard
+
+    volumes:
+      - ./wireguard/data:/etc/wireguard
+
+    environment:
+      - PASSWORD=${WG_PASSWORD}   # depuis .env
+      - WG_HOST=${WG_HOST}        # depuis .env
+      - LANG=fr
+    env_file:
+      - .env
+
+  # Serveur OpenLDAP
+  openldap:
+    image: osixia/openldap:1.5.0
+    container_name: openldap
+    restart: unless-stopped
+    environment:
+      LDAP_ORGANISATION: "${LDAP_ORG}"
+      LDAP_DOMAIN: "${LDAP_DOMAIN}"
+      LDAP_ADMIN_PASSWORD: "${LDAP_ADMIN_PASS}"
+      LDAP_TLS: "false"    # plus simple pour commencer
+    volumes:
+      - ./ldap/database:/var/lib/ldap
+      - ./ldap/config:/etc/ldap/slapd.d
+      - ./ldap/certs:/container/service/slapd/assets/certs
+    ports:
+      - "389:389"
+      - "636:636"
+    networks:
+      - ldap_net
+
+  # Interface web phpLDAPadmin
+  phpldapadmin:
+    image: osixia/phpldapadmin:0.9.0
+    container_name: phpldapadmin
+    restart: unless-stopped
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: openldap
+      PHPLDAPADMIN_HTTPS: "false"
+    ports:
+      - "8080:80"      # accès direct depuis le PC hôte
+    depends_on:
+      - openldap
+    networks:
+      - ldap_net
+
+  # ClamAV en conteneur
+  clamav:
+    image: clamav/clamav:1.4_base
+    container_name: clamav
+    restart: unless-stopped
+    ports:
+      - "3310:3310"  # utile si un autre service envoie des fichiers à scanner
+    environment:
+      CLAMAV_NO_CLAMD: "false"
+      CLAMAV_NO_FRESHCLAMD: "false"
+      CLAMAV_NO_MILTERD: "true"
+      FRESHCLAM_CHECKS: 12
+    volumes:
+      - clamav_db:/var/lib/clamav
+      - ./clamav/a_scanner:/a_scanner:ro
+
+volumes:
+  clamav_db:
+
+networks:
+  ldap_net:
+    driver: bridge

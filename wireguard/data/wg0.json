@@ -4,5 +4,16 @@
     "publicKey": "TTPfF70ApjPbvE+B0/UyUqCb6zZxhQMQJjEBNrslIA4=",
     "address": "10.8.0.1"
   },
-  "clients": {}
+  "clients": {
+    "854bc1b6-101c-4c58-a7ba-40131bfad506": {
+      "name": "nedj-test",
+      "address": "10.8.0.2",
+      "privateKey": "SCNzwDr6PpzHbsuG3TISWWwHYo10PIA4RkQnmQkNelg=",
+      "publicKey": "5RTQgt0mGUXCTyjVQHnQ2b2dSlZV1jbH1a4Bw9wnW3g=",
+      "preSharedKey": "qSaRpTIgASqPILFp0nVIYwHsbJ6VwpcJNAECgbX/N6w=",
+      "createdAt": "2025-11-30T16:32:42.836Z",
+      "updatedAt": "2025-11-30T16:36:00.982Z",
+      "enabled": false
+    }
+  }
 }

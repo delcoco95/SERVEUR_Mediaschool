@@ -1,32 +1,32 @@
 # AUTO-GENERATED FILE - DO NOT EDIT!! Use ldapmodify.
-# CRC32 a92b0651
+# CRC32 1095575b
 dn: olcDatabase={1}mdb
 objectClass: olcDatabaseConfig
 objectClass: olcMdbConfig
 olcDatabase: {1}mdb
 olcDbDirectory: /var/lib/ldap
-olcSuffix: dc=mediaschool,dc=local
+olcSuffix: dc=iris,dc=local
 olcLastMod: TRUE
-olcRootDN: cn=admin,dc=mediaschool,dc=local
-olcRootPW:: e1NTSEF9TFI3eWdscS9UR3FjdllWRVZMT0VzbUxiQkU3WTlKREo=
+olcRootDN: cn=admin,dc=iris,dc=local
+olcRootPW:: e1NTSEF9RHF0Nm9KUU0wYXQyVkZhck9CK2ZOVG5NNlg0S041d1E=
 olcDbCheckpoint: 512 30
 olcDbMaxSize: 1073741824
 structuralObjectClass: olcMdbConfig
-entryUUID: fadfbd8c-6224-1040-8b75-6df1d8b88585
+entryUUID: aadfad68-624e-1040-86e3-79ec46720068
 creatorsName: cn=admin,cn=config
-createTimestamp: 20251130104215Z
+createTimestamp: 20251130154039Z
 olcAccess: {0}to * by dn.exact=gidNumber=0+uidNumber=0,cn=peercred,cn=extern
  al,cn=auth manage by * break
 olcAccess: {1}to attrs=userPassword,shadowLastChange by self write by dn="cn
- =admin,dc=mediaschool,dc=local" write by anonymous auth by * none
-olcAccess: {2}to * by self read by dn="cn=admin,dc=mediaschool,dc=local" wri
- te by * none
+ =admin,dc=iris,dc=local" write by anonymous auth by * none
+olcAccess: {2}to * by self read by dn="cn=admin,dc=iris,dc=local" write by *
+  none
 olcDbIndex: uid eq
 olcDbIndex: mail eq
 olcDbIndex: memberOf eq
 olcDbIndex: entryCSN eq
 olcDbIndex: entryUUID eq
 olcDbIndex: objectClass eq
-entryCSN: 20251130104217.325303Z#000000#000#000000
+entryCSN: 20251130154044.353939Z#000000#000#000000
 modifiersName: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth
-modifyTimestamp: 20251130104217Z
+modifyTimestamp: 20251130154044Z
